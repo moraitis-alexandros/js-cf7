@@ -29,5 +29,15 @@ const updateOneItem = (arr, index, newValue) =>
     arr.map((item, i) => (i === index) ? newValue : item)
 
 const updatedNumbers = updateOneItem(numbers, 2, 17)
-
 console.log(updatedNumbers)
+
+//Delete
+//Modifies initial array
+numbers.splice(0, 1)
+
+
+//Fresh Copies
+const deleteFromArray = (arr, num) => arr.filter(item => item != num)
+
+const deleteByIndex = (arr, index) => [...arr.slice(0, index), ...arr.slice(index+1)]
+
